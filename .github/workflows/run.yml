@@ -1,8 +1,15 @@
-
 name: actions-trial
 on: [push]
+
 jobs:
-  check-bats-version:
+  test:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "test"
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Grant execute permission
+      run: chmod +x script.sh test_test_scropt.sh
+
+    - name: Run the same script test
+      run: ./test_same.sh
