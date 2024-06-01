@@ -5,11 +5,11 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
+    - name: Checkout
+    - uses: actions/checkout@v2
 
     - name: Grant execute permission
-      run: chmod +x script.sh test_test_scropt.sh
+    - run: chmod +x script.sh test_test_scropt.sh
 
     - name: Run the same script test
-      run: ./test_same.sh
+    - run: ./test_same.sh
