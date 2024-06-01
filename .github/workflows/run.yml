@@ -1,10 +1,9 @@
-name: actions-trial
-on: [push]
-
-jobs:
+name: script-checker
+on: push
+  jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - run: chmod +x script.sh test_test_scropt.sh
-    - run: ./test_same.sh
+      - uses: actions/checkout@v3
+      - run: chmod +x script.sh test_test_scropt.sh
+      - run: ./test_same.sh
